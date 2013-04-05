@@ -453,6 +453,7 @@
 				A6F5E4F6170DCD1B0092A35B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6F5E4F7170DCD1B0092A35B /* Build configuration list for PBXNativeTarget "UiDesignFromCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +462,7 @@
 				A6F5E4F9170DCD1B0092A35B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

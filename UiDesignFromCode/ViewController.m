@@ -14,10 +14,25 @@
 
 @implementation ViewController
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSLog(@"view %@", self.view);
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    CGRect frame = CGRectMake(10, 10, 100, 100);
+    UIView *blueView = [[UIView alloc] initWithFrame:frame];
+    blueView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:blueView];
+    
 }
 
 - (void)didReceiveMemoryWarning
