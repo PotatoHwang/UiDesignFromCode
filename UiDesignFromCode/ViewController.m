@@ -27,10 +27,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    UIImage *image = [UIImage imageNamed:@"painting.jpg"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"painting.jpg" ofType:nil];
+    NSLog(@"path %@", path);
+    UIImage *image = [[UIImage alloc] initWithContentsOfFile:path];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    [self.view addSubview:imageView];
     imageView.frame = CGRectMake(10, 10, 307.2, 409.6);
+    [self.view addSubview:imageView];
     
 }
 
