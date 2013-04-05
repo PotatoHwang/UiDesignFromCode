@@ -28,22 +28,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    CGRect frame = CGRectMake(10, 10, 200, 200);
-    UIView *blueView = [[UIView alloc] initWithFrame:frame];
-    blueView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:blueView];
-    
-    frame = CGRectMake(10, 10, 310, 100);
-    UIView *yellowView = [[UIView alloc] initWithFrame:frame];
-    yellowView.backgroundColor = [UIColor yellowColor];
-    [blueView addSubview:yellowView];
-
-    frame = CGRectMake(-10, 10, 100, 100);
-    UIView *greenView = [[UIView alloc] initWithFrame:frame];
-    greenView.backgroundColor = [UIColor greenColor];
-    [yellowView addSubview:greenView];
-
-    
+    UIImage *image = [UIImage imageNamed:@"painting.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    [self.view addSubview:imageView];
+    imageView.frame = CGRectMake(10, 10, 307.2, 409.6);
 }
 
 - (void)didReceiveMemoryWarning
