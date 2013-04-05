@@ -18,7 +18,6 @@
 {
     [super viewDidAppear:animated];
     
-    NSLog(@"view %@", self.view);
 }
 
 
@@ -32,6 +31,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     [self.view addSubview:imageView];
     imageView.frame = CGRectMake(10, 10, 307.2, 409.6);
+    
 }
 
 - (void)didReceiveMemoryWarning
