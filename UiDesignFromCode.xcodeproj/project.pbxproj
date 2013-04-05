@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A69631B5170EF4B300F44A95 /* painting@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A69631B4170EF4B300F44A95 /* painting@2x.jpg */; };
 		A69631B7170EF6F300F44A95 /* painting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A69631B6170EF6F300F44A95 /* painting.jpg */; };
+		A69631B9170F2C9E00F44A95 /* painting@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A69631B8170F2C9E00F44A95 /* painting@2x.jpg */; };
 		A6F5E4C0170DCD1A0092A35B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F5E4BF170DCD1A0092A35B /* UIKit.framework */; };
 		A6F5E4C2170DCD1B0092A35B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F5E4C1170DCD1A0092A35B /* Foundation.framework */; };
 		A6F5E4C4170DCD1B0092A35B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F5E4C3170DCD1B0092A35B /* CoreGraphics.framework */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A69631B4170EF4B300F44A95 /* painting@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "painting@2x.jpg"; sourceTree = "<group>"; };
 		A69631B6170EF6F300F44A95 /* painting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = painting.jpg; sourceTree = "<group>"; };
+		A69631B8170F2C9E00F44A95 /* painting@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "painting@2x.jpg"; sourceTree = "<group>"; };
 		A6F5E4BC170DCD1A0092A35B /* UiDesignFromCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiDesignFromCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F5E4BF170DCD1A0092A35B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A6F5E4C1170DCD1A0092A35B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,8 +134,8 @@
 		A6F5E4C6170DCD1B0092A35B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A69631B8170F2C9E00F44A95 /* painting@2x.jpg */,
 				A69631B6170EF6F300F44A95 /* painting.jpg */,
-				A69631B4170EF4B300F44A95 /* painting@2x.jpg */,
 				A6F5E4C7170DCD1B0092A35B /* UiDesignFromCode-Info.plist */,
 				A6F5E4C8170DCD1B0092A35B /* InfoPlist.strings */,
 				A6F5E4CB170DCD1B0092A35B /* main.m */,
@@ -242,8 +242,8 @@
 				A6F5E4D4170DCD1B0092A35B /* Default@2x.png in Resources */,
 				A6F5E4D6170DCD1B0092A35B /* Default-568h@2x.png in Resources */,
 				A6F5E4D9170DCD1B0092A35B /* MainStoryboard.storyboard in Resources */,
-				A69631B5170EF4B300F44A95 /* painting@2x.jpg in Resources */,
 				A69631B7170EF6F300F44A95 /* painting.jpg in Resources */,
+				A69631B9170F2C9E00F44A95 /* painting@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
