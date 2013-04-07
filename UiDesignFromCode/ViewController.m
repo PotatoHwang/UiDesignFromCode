@@ -32,6 +32,12 @@
     [self.view addSubview:imageView];
     imageView.center = CGPointMake(160, ([UIScreen mainScreen].bounds.size.height-20)/2);
     NSLog(@"[UIScreen mainScreen].bounds %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
+    imageView.clipsToBounds = YES;
+    
+    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 350, 100, 100)];
+    blueView.backgroundColor = [UIColor blueColor];
+    [imageView addSubview:blueView];
+    
 }
 
 - (void)didReceiveMemoryWarning
