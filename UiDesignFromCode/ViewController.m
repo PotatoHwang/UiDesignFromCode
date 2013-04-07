@@ -27,16 +27,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 307.2, 409.6)];
-    imageView.image = [UIImage imageNamed:@"painting.jpg"];
-    [self.view addSubview:imageView];
-    imageView.center = CGPointMake(160, ([UIScreen mainScreen].bounds.size.height-20)/2);
-    NSLog(@"[UIScreen mainScreen].bounds %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
-    imageView.clipsToBounds = YES;
     
-    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 350, 100, 100)];
-    blueView.backgroundColor = [UIColor blueColor];
-    [imageView addSubview:blueView];
+    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 200, 200)];
+    blueView.backgroundColor = [UIColor colorWithRed:30/255.0 green:144/255.0 blue:1 alpha:0.2];
+    [self.view addSubview:blueView];
+    
+    UIView *blackView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    blackView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:blackView];
     
 }
 
