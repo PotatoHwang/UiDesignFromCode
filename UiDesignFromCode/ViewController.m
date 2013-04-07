@@ -28,13 +28,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     
-    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 200, 200)];
-    blueView.backgroundColor = [UIColor colorWithRed:30/255.0 green:144/255.0 blue:1 alpha:0.2];
-    [self.view addSubview:blueView];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 200, 200)];
+    view1.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:view1];
     
-    UIView *blackView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
-    blackView.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:blackView];
+    UIView *view1_1 = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
+    view1_1.backgroundColor = [UIColor grayColor];
+    [view1 addSubview:view1_1];
+    
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
+    view2.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:view2];
+
     
 }
 
