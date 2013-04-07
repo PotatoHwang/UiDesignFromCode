@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TestView.h"
 
 @interface ViewController ()
 
@@ -20,35 +21,27 @@
     
 }
 
-
+-(void)removeView1:(UIView*)targetView
+{
+    [targetView removeFromSuperview];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    NSLog(@"self.view %p", self.view);
+    TestView *view1 = [[TestView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    view1.tag = 1;
+    view1.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:view1];
     
-    UIImage *image = [UIImage imageNamed:@"painting.jpg"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    imageView.frame = CGRectMake(10, 10, 307.2, 409.6);
-    [self.view addSubview:imageView];
-    NSLog(@"imageView %p", imageView);
+    TestView *view2 = [[TestView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    view2.tag = 2;
+    view2.backgroundColor = [UIColor blueColor];
+    [view1 addSubview:view2];
     
-    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(110, 80, 100, 100)];
-    blueView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:blueView];
-    NSLog(@"blueView %p", blueView);
-
-    NSLog(@"imageView.superview %p", imageView.superview);
-
-    [self.view bringSubviewToFront:imageView];
-    
-    for(UIView *subview in self.view.subviews)
-    {
-        NSLog(@"subview %p", subview);
-
-    }
+    [self performSelector:@selector(removeView1:) withObject:view1 afterDelay:10];
 }
 
 - (void)didReceiveMemoryWarning
