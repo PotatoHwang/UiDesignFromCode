@@ -21,23 +21,28 @@
     
 }
 
+-(void)removeKeyboard:(id)sender
+{
+    [sender resignFirstResponder];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 307.2, 409.6)];
     imageView.image = [UIImage imageNamed:@"painting.jpg"];
     [self.view addSubview:imageView];
     imageView.center = CGPointMake(160, ([UIScreen mainScreen].bounds.size.height-20)/2);
     NSLog(@"[UIScreen mainScreen].bounds %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
-    imageView.clipsToBounds = YES;
     
-    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 350, 100, 100)];
-    blueView.backgroundColor = [UIColor blueColor];
-    [imageView addSubview:blueView];
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(160-100,
+                            10, 200, 30)];
+    [self.view addSubview:textField];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
     
+    [textField addTarget:self action:@selector(removeKeyboard:) forControlEvents:UIControlEventEditingDidEndOnExit];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +50,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
