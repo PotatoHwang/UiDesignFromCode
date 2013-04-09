@@ -9,11 +9,11 @@
 #import "ViewController.h"
 #import "TestView.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -41,8 +41,8 @@
                             10, 200, 30)];
     [self.view addSubview:textField];
     textField.borderStyle = UITextBorderStyleRoundedRect;
-    
-    [textField addTarget:self action:@selector(removeKeyboard:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    textField.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,5 +51,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma makr - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end
