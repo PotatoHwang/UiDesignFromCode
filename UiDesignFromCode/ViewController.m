@@ -51,6 +51,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
 #pragma makr - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
